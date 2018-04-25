@@ -10,3 +10,13 @@ Tags:
 
 This theme, like WordPress, is licensed under the GPL.
 */
+
+/*
+Admin header spacing
+body.logged-in{
+	margin-top:55px;
+}
+body.logged-in .navbar-expand-md {
+    margin-top: 30px;
+}
+*/
