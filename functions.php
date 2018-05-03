@@ -16,7 +16,7 @@ function enqueue_scripts() {
 add_action( 'wp_enqueue_scripts', 'enqueue_scripts');
 
 add_theme_support( 'post-thumbnails' );
-
+add_image_size( 'wpse73058', 700, 9999, false );
 //Add Menu Support
 
 function register_my_menus() {

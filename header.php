@@ -32,3 +32,14 @@
         </ul>
       </div>
     </nav>
+    <div class="custom-header-bg">
+
+    <!--Add Header image to page.-->
+          <div class="header-wrap" style="background-image: url('<?php the_post_thumbnail_url(array(700, 9999));?>')">
+           <header class="entry-header">
+             <h1 class="entry-title">
+               <?php the_title();rewind_posts();?>
+             </h1>
+          </header>
+        </div>
+     </div>
