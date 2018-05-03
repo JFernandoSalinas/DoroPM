@@ -39,7 +39,7 @@ function register_my_menus() {
 add_action( 'init', 'register_my_menus' );
 
 /**
- * Register our Homepage widgetized area.
+ * Register our Homepage and Sidebar widgetized area.
  *
  */
 function arphabet_widgets_init() {
@@ -49,9 +49,17 @@ function arphabet_widgets_init() {
 		'id'            => 'home_widget',
 		'before_widget' => '<div>',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="rounded">',
+		'before_title'  => '<h2 class="widget title">',
 		'after_title'   => '</h2>',
 	) );
 
+  register_sidebar( array(
+		'name'          => 'Sidebar',
+		'id'            => 'default_right_sidebar',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="sidebar title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'arphabet_widgets_init' );

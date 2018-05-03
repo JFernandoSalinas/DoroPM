@@ -17,8 +17,12 @@ This theme, like WordPress, is licensed under the GPL.
   color: #FFF;
   font-size:2em;
   line-height: 1.2em;
-  padding: 2em 0;
-  background: rgba(0, 0, 0, .25);
+}
+header.entry-header p {
+color: #FFF;
+position: relative;
+z-index: 6;
+font-size: 1em;
 }
 
 /*Remove Horizontal Bar due to header image. */
@@ -31,17 +35,36 @@ This theme, like WordPress, is licensed under the GPL.
   background-size: cover;
   background-position: center;
   position: relative;
+  padding-top: 16em;
+  padding-bottom: 15em;
+
+}
+.header-wrap::after{
+  content: ' ';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,.25);
+  z-index: 5;
 }
 /*Tablet iPad Resolution */
 
 /*Desktop Resolution*/
 @media only screen and (min-width: 992px) {
 .header-wrap h1.entry-title {
+  position:relative;
+  z-index: 6;
   font-weight: 400;
   color: #FFF;
   font-size:3em;
   line-height: 1.2em;
-  padding: 5em 0;
-  background: rgba(0, 0, 0, .25);
+  }
+  header.entry-header p {
+  color: #FFF;
+  position: relative;
+  z-index: 6;
+  font-size: 1.2em;
 }
 }

@@ -19,4 +19,9 @@
             </ul>
         </aside>
    <?php endif; ?>
+   <?php if ( is_active_sidebar( 'default_right_sidebar' ) ) : ?>
+	    <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+		      <?php dynamic_sidebar( 'default_right_sidebar' ); ?>
+	     </div>
+       <?php endif; ?>
 </div>

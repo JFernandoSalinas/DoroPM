@@ -10,7 +10,7 @@ get_header();
 		<main id="main" class="site-main">
 
 			<?php if ( is_active_sidebar( 'home_widget' ) ) : ?>
-				<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+				<div id="homepage-widget-area" class="home widget-area" role="complementary">
 					<?php dynamic_sidebar( 'home_widget' ); ?>
 				</div><!-- #primary-sidebar -->
 			<?php endif; ?>
@@ -33,5 +33,5 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+
 get_footer();
