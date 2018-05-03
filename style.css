@@ -11,20 +11,20 @@ Tags:
 This theme, like WordPress, is licensed under the GPL.
 */
 
-/*
-Admin header spacing
-body.logged-in{
-	margin-top:55px;
+/*Mobile Resolution */
+.header-wrap h1.entry-title {
+  font-weight: 400;
+  color: #FFF;
+  font-size:2em;
+  line-height: 1.2em;
+  padding: 2em 0;
+  background: rgba(0, 0, 0, .25);
 }
-body.logged-in .navbar-expand-md {
-    margin-top: 30px;
-}
-*/
+
 /*Remove Horizontal Bar due to header image. */
 .custom-header-bg{
    overflow-x:hidden;
    overflow-y:hidden;
-
 }
 .header-wrap {
   text-align: center;
@@ -32,11 +32,16 @@ body.logged-in .navbar-expand-md {
   background-position: center;
   position: relative;
 }
+/*Tablet iPad Resolution */
+
+/*Desktop Resolution*/
+@media only screen and (min-width: 992px) {
 .header-wrap h1.entry-title {
   font-weight: 400;
   color: #FFF;
   font-size:3em;
   line-height: 1.2em;
   padding: 5em 0;
-  background: rgba(0, 0, 0, .20) !important;
+  background: rgba(0, 0, 0, .25);
+}
 }
