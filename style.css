@@ -13,6 +13,8 @@ This theme, like WordPress, is licensed under the GPL.
 
 /*Mobile Resolution */
 .header-wrap h1.entry-title {
+  position:relative;
+  z-index: 6;
   font-weight: 400;
   color: #FFF;
   font-size:2em;
@@ -24,19 +26,105 @@ position: relative;
 z-index: 6;
 font-size: 1em;
 }
+/*header mwnu styling */
+nav.navbar.navbar-expand-md {
+    position: relative;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.primary.nav-menu {
+    vertical-align: middle;
+    text-align: right;
+    width: 100%;
+}
+ul#menu-primary > li {
+    list-style-type: none;
+    display: inline;
+    margin-right:5%;
+}
+ul#menu-primary {
+  margin-bottom: 0 ;
+}
+/*CSS for sub-menu*
+.sub-menu::before{
+  font-size: 1.5em;
+  content: ">";
+  position: absolute;
+  top:0;
+  padding-left: 5px;
+  color:#fff;
+}
 
+
+.sub-menu li{
+  display: none !important;
+  list-style:none !important;
+  position:relative;
+  display:list-item;
+  width: 25%;
+  background-color: #fff;
+  border-color: #e7e7e7;
+  padding:5px;
+  text-align: left;
+}
+.sub-menu li a{
+  color:#343a40;
+  text-decoration: none;
+  padding-bottom: 3px;
+  padding-left: 10px;
+  font-size: 1.1em;
+  font-weight: 450;
+}/
+
+
+
+/*Menu Link styling and hover effect */
+
+ul#menu-primary > li > a{
+    text-transform: uppercase;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 3px;
+    font-size: 1.1em;
+    font-weight: 450;
+  }
+ul#menu-primary>li>a:hover{
+  color: #fff;
+  padding-bottom: 3px;
+}
+ul#menu-primary>li>a:before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+ul#menu-primary>li>a:hover:before {
+  visibility: visible;
+ -webkit-transform: scaleX(1);
+ transform: scaleX(1);
+}
 /*Remove Horizontal Bar due to header image. */
 .custom-header-bg{
    overflow-x:hidden;
    overflow-y:hidden;
 }
+
 .header-wrap {
   text-align: center;
   background-size: cover;
-  background-position: center;
+  background-position: center 65%;
   position: relative;
-  padding-top: 16em;
-  padding-bottom: 15em;
+  padding-top: 14em;
+  padding-bottom: 14em;
 
 }
 .header-wrap::after{

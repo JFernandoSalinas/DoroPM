@@ -18,33 +18,29 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <?php if(has_custom_logo()) {
-        the_custom_logo();
-      }else {?>
-      <a class="navbar-brand" href="#"><?php bloginfo('name'); ?></a>
-     <?php } ?>
-      <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="custom-header-bg">
-
-    <!--Add Header image to page.-->
-          <div id="header-wrap" class="header-wrap" style="background-image: url('<?php the_post_thumbnail_url(array(700, 9999));?>')">
-           <header class="entry-header">
-             <h1 class="entry-title">
-               <?php the_title();rewind_posts();?>
-             </h1>
-             <?php if(is_front_page()){ echo apply_filters( 'the_content', get_post( get_option( 'page_on_front' ) )->post_content ); }?>
-          </header>
-      </div>
-     </div>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="site-branding">
+            <?php if(has_custom_logo()) {
+              the_custom_logo();
+            }else {?>
+            <a class="navbar-brand" href="#"><?php bloginfo('name'); ?></a>
+           <?php } ?>
+        </div>
+        <div class="primary nav-menu">
+            <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+      <div class="custom-header-bg">
+      <!--Add Header image to page.-->
+            <div id="header-wrap" class="header-wrap" style="background-image: url('<?php the_post_thumbnail_url(array(700, 9999));?>')">
+             <header class="entry-header">
+               <h1 class="entry-title">
+                 <?php the_title();rewind_posts();?>
+               </h1>
+               <?php if(is_front_page()){ echo apply_filters( 'the_content', get_post( get_option( 'page_on_front' ) )->post_content ); }?>
+            </header>
+        </div>
+       </div>
