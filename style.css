@@ -10,6 +10,7 @@ Tags:
 
 This theme, like WordPress, is licensed under the GPL.
 */
+/*Aligh widget title and description*/
 
 /*Mobile Resolution */
 .header-wrap h1.entry-title {
@@ -21,16 +22,30 @@ This theme, like WordPress, is licensed under the GPL.
   line-height: 1.2em;
 }
 header.entry-header p {
-color: #FFF;
-position: relative;
-z-index: 6;
-font-size: 1em;
+    color: #FFF;
+    position: relative;
+    z-index: 6;
+    font-size: 1em;
 }
+.header-wrap {
+  text-align: center;
+/*  background-attachment: fixed;  for parallax effect*/
+  background-size: cover;
+  background-position: center 65%;
+  position: relative;
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+/*weather widget font adjustment*/
+#plemx-root .temp {
+    font-size: 16px;
+  }
+
 /*header mwnu styling */
 nav.navbar.navbar-expand-md {
     position: relative;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 .primary.nav-menu {
     vertical-align: middle;
@@ -40,43 +55,83 @@ nav.navbar.navbar-expand-md {
 ul#menu-primary > li {
     list-style-type: none;
     display: inline;
-    margin-right:5%;
+    margin-right:3%;
 }
 ul#menu-primary {
   margin-bottom: 0 ;
 }
-/*CSS for sub-menu*
-.sub-menu::before{
-  font-size: 1.5em;
-  content: ">";
-  position: absolute;
-  top:0;
-  padding-left: 5px;
-  color:#fff;
+.menu-primary-container a {
+transition:all linear 0.15s;
+color: #7c8084;
+}
+.menu-primary-container li:hover > a, .menu .current-item > a {
+  text-decoration:none;
+  color:#FFF;
+}
+.menu-primary-container .arrow {
+font-size:11px;
+line-height:0%;
 }
 
-
-.sub-menu li{
-  display: none !important;
-  list-style:none !important;
-  position:relative;
-  display:list-item;
-  width: 25%;
-  background-color: #fff;
-  border-color: #e7e7e7;
-  padding:5px;
-  text-align: left;
+.menu-primary-container > ul > li {
+text-align: right;
+display:inline-block;
+position:relative;
 }
-.sub-menu li a{
-  color:#343a40;
-  text-decoration: none;
-  padding-bottom: 3px;
-  padding-left: 10px;
-  font-size: 1.1em;
-  font-weight: 450;
-}/
+.menu-primary-container > ul > li > a {
+  display:inline-block;
+  text-shadow:0px 1px 0px rgba(0,0,0,0.4);
+}
+.menu > ul > li:hover > a, .menu > ul > .current-item > a {
+  background:#5c6166;
+}
 
+/*CSS for the Bottom Nav*/
+.bottom-nav-div.row {
+    background: #505962;
+}
+.contact-details {
+    text-align: right;
+}
+.contact-details h4 {
+   color:#fff;
+   margin-right: 33%;
+   font-weight: 400;
+}
+.ion-android-call:before {
+    margin-right: 5px;
+}
+/*CSS for sub-menu*/
+ul.sub-menu {
+  width:160%;
+  padding:5px 0px;
+  position:absolute;
+  top:100%;
+  left:0px;
+  z-index:-1;
+  opacity:0;
+  transition:opacity linear 0.15s;
+  box-shadow:0px 2px 3px rgba(0,0,0,0.2);
+  background: #292e33;
+  margin-top: 6%;
+}
+.sub-menu li {
+  display:block;
+  font-size:16px;
+}
+.sub-menu li a {
+  padding:10px 30px;
+  display:block;
+  text-align: center !important;
+  }
+.sub-menu li a:hover, .sub-menu .current-item a {
+  background:#999c9f;
+}
 
+.menu-primary-container li:hover .sub-menu {
+  z-index:1;
+  opacity:1;
+}
 
 /*Menu Link styling and hover effect */
 
@@ -89,11 +144,8 @@ ul#menu-primary > li > a{
     font-size: 1.1em;
     font-weight: 450;
   }
-ul#menu-primary>li>a:hover{
-  color: #fff;
-  padding-bottom: 3px;
-}
-ul#menu-primary>li>a:before{
+
+ul#menu-primary>li:before{
   content: "";
   position: absolute;
   width: 100%;
@@ -107,10 +159,29 @@ ul#menu-primary>li>a:before{
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
-ul#menu-primary>li>a:hover:before {
-  visibility: visible;
- -webkit-transform: scaleX(1);
- transform: scaleX(1);
+ul#menu-primary>li:before>.sub-menu{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+ul#menu-primary>li:hover:before {
+   visibility: visible;
+   -webkit-transform: scaleX(1);
+   transform: scaleX(1);
+}
+ul#menu-primary>li:hover:before>.sub-menu {
+   visibility: visible;
+   -webkit-transform: scaleX(1);
+   transform: scaleX(1);
 }
 /*Remove Horizontal Bar due to header image. */
 .custom-header-bg{
@@ -118,15 +189,7 @@ ul#menu-primary>li>a:hover:before {
    overflow-y:hidden;
 }
 
-.header-wrap {
-  text-align: center;
-  background-size: cover;
-  background-position: center 65%;
-  position: relative;
-  padding-top: 14em;
-  padding-bottom: 14em;
 
-}
 .header-wrap::after{
   content: ' ';
   position: absolute;
@@ -155,4 +218,18 @@ ul#menu-primary>li>a:hover:before {
   z-index: 6;
   font-size: 1.2em;
 }
+.header-wrap {
+  text-align: center;
+  background-size: cover;
+  background-position: center 65%;
+  position: relative;
+  padding-top: 14em;
+  padding-bottom: 14em;
+
+}
+}
+/*homepage widget area desktop marding*/
+div#homepage-widget-area {
+    margin-right: 15%;
+    margin-left: 15%;
 }

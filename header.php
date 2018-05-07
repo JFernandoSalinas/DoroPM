@@ -33,6 +33,10 @@
           <span class="navbar-toggler-icon"></span>
         </button>
       </nav>
+      <div class="bottom-nav-div row">
+        <div class='weather-widget col-sm-6'><div id="plemx-root"></div></div>
+        <div class="contact-details col-sm-6"><h4 class="icon ion-android-call"><a>416-897-8142</a></h4></i></div>
+     </div>
       <div class="custom-header-bg">
       <!--Add Header image to page.-->
             <div id="header-wrap" class="header-wrap" style="background-image: url('<?php the_post_thumbnail_url(array(700, 9999));?>')">

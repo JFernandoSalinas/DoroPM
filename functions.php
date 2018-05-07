@@ -1,14 +1,17 @@
 <?php
-
+//Add my styling and Bootstrap styling
 function enqueue_styles() {
-
     wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
     wp_enqueue_style( 'core', get_template_directory_uri() . '/style.css' );
-
+    wp_register_style( 'Font_Awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' );
+    wp_enqueue_style('Font_Awesome');
+    wp_register_style( 'ionicons', 'http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' );
+    wp_enqueue_style('ionicons');
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_styles');
+//add my scripts along with other Libraries like jquery, bootstrap
 function enqueue_scripts() {
-
+    wp_enqueue_script( 'theme_scripts', get_template_directory_uri() . '/js/themeScripts.js', array('jquery'));
     wp_enqueue_script( 'jqslim', get_template_directory_uri() . '/js/vendor/jquery-3.3.1.slim.min.js' );
     wp_enqueue_script( 'popper', get_template_directory_uri() . '/js/vendor/popper.min.js' );
     wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js' );
@@ -47,9 +50,9 @@ function arphabet_widgets_init() {
 	register_sidebar( array(
 		'name'          => 'Home widget area',
 		'id'            => 'home_widget',
-		'before_widget' => '<div>',
+		'before_widget' => '<div class="widget">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="widget title">',
+		'before_title'  => '<h2 class="widget_title">',
 		'after_title'   => '</h2>',
 	) );
 
