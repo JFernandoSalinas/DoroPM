@@ -11,25 +11,31 @@
 
 ?>
 
-		</div><!-- #content -->
+	</div><!-- #content -->
 
-		<footer id="colophon" class="site-footer">
-			<div class="site-info">
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'doropm' ) ); ?>">
-					<?php
-					/* translators: %s: CMS name, i.e. WordPress. */
-					printf( esc_html__( 'Proudly powered by %s', 'doropm' ), 'WordPress' );
-					?>
-				</a>
-				<span class="sep"> | </span>
-					<?php
-					/* translators: 1: Theme name, 2: Theme author. */
-					printf( esc_html__( 'Theme: %1$s by %2$s.', 'doropm' ), 'DoroPM', '<a href="http://fersatos.com/">Fersatos</a>' );
-					?>
-			</div><!-- .site-info -->
-		</footer><!-- #colophon -->
-	</div><!-- #page -->
-</div>
+	<footer id="colophon" class="site-footer">
+		<div class="site-info row">
+				<div class="col-xs-12 col-md-5">
+						<p>	&copy;COPYRIGHT <?php echo date('Y'); ?> |
+							<a href="<?php echo esc_url( __( 'https://doropm.com/', 'doropm' ) ); ?>"> DoroPM.com </a>
+							| ALL RIGHTS RESERVED
+						</p>
+				</div>
+				<div class="col-xs-12 col-md-5">
+					<p>
+						<?php
+						/* translators: 1: Theme name, 2: Theme author. */
+						printf( esc_html__( 'Designed and developed by %1$s.' ), '<a href="http://fersatos.com/">FERSATOS</a>' );
+						?>
+					</p>
+			  </div>
+				<div class="col-xs-12 col-md-2">
+				  <p id="smoothup"><i class="icon ion-arrow-up-c"></i></p>
+				</div>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
 <?php wp_footer(); ?>
 
 </body>

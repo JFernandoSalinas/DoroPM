@@ -21,7 +21,6 @@
 })(jQuery);
 
 //Add Weather widget to page:
-
     var _plm = _plm || [];
     _plm.push(['_btn', 79100]);
     _plm.push(['_loc','caon0696']);
@@ -42,3 +41,17 @@
     s.parentNode.insertBefore(px, s);
     s.parentNode.insertBefore(py, s);
     })(document, 'script', 'plmxbtn');
+//Scroll to top
+jQuery(document).ready(function($){
+    $(window).scroll(function(){
+        if ($(this).scrollTop() < 200) {
+
+        } else {
+            $('#smoothup') .fadeIn();
+        }
+    });
+    $('#smoothup').on('click', function(){
+        $('html, body').animate({scrollTop:0}, 'normal');
+        return false;
+        });
+});
