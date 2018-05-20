@@ -66,3 +66,12 @@ function arphabet_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'arphabet_widgets_init' );
+
+/**
+ * Register features widget.
+ */
+function custom_widgets_init() {
+	include_once( dirname( __FILE__ ) . '/inc/widgets/class-widget-features.php' );
+	register_widget( 'DoroPM_Features' );
+}
+add_action( 'widgets_init', 'custom_widgets_init', 20 );
