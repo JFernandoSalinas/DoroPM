@@ -80,6 +80,7 @@ public function form( $instance ) {
 					?>
 					<fieldset class="field_set">
 							<legend><strong>Feature 1</strong></legend>
+								<p class='expand'>+</p>
 								<div class="feature_content">
 
 									<p>
@@ -127,6 +128,7 @@ public function form( $instance ) {
 					?>
 					<fieldset class="field_set">
 						<legend><strong>Feature 2</strong></legend>
+						<p class='expand'>+</p>
 						<div class="feature_content">
 								<p>
 										<label for="<?php echo $this->get_field_name( 'title_2' ); ?>"><?php _e( 'Title:' ); ?></label>
@@ -173,6 +175,7 @@ public function form( $instance ) {
 					?>
 					<fieldset class="field_set">
 						<legend><strong>Feature 3</strong></legend>
+						  <p class='expand'>+</p>
 						  <div class="feature_content">
 
 							<p>
@@ -200,7 +203,25 @@ public function form( $instance ) {
 				</fieldset>
 
 			</div>
-			<style>.field_set{border: 1px solid #ddd;margin-top: 5px;}.feature_content{padding: 10px;}</style>
+			<script>
+
+			jQuery(document).ready(function($){
+			  $( ".feature_content" ).hide();
+			});
+
+			$(".field_set").click(function(){
+				if($(this).children(".feature_content" ).is(":visible")){
+					$(this).children(".feature_content" ).slideUp('slow');
+					$(this).children(".expand").text('+');
+				}else {
+					$(this).children(".feature_content" ).slideDown('slow');
+					$(this).children(".expand").text('-');
+				}
+			});
+
+			</script>
+
+			<style>.expand{font-size: 2em;line-height: 0;margin: 10px;margin-bottom:20px;float: right;}.field_set{border: 1px solid #ddd;margin-top: 10px;}.feature_content{padding: 10px;}</style>
 <?php
 }
 
