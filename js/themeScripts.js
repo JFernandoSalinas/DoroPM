@@ -55,3 +55,10 @@ jQuery(document).ready(function($){
         return false;
         });
 });
+jQuery(document).ready(function($) {
+        jQuery('.color-picker').on('focus', function(){
+            var parent = jQuery(this).parent();
+            jQuery(this).wpColorPicker()
+            parent.find('.wp-color-result').click();
+        });
+});

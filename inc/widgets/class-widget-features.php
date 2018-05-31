@@ -27,54 +27,52 @@
  */
 public function widget( $args, $instance ) {
 	// outputs the content of the widget
-			echo $args['before_widget'];
-			if ( ! empty( $instance['main_title'] & $instance['main_description']) ) {
-					echo $args['before_title'] . apply_filters( 'widget_title', $instance['main_title'] ). $args['after_title'];
-					echo $args['before_description'] . apply_filters( 'wp_widget_description', $instance['main_description'] ). $args['after_description'];
-		}
-			// Rest of the widget content
+
 			?>
-			<div class="row">
-					<div class='feature-area-1 col-md-4 col-xs-12'>
-						<div class='feature-1-title'>
-							<h5><?php echo wpautop( esc_html( $instance['title_1'] ) ) ?></h5>
-						</div>
-						<div class='feature-images' id='feature-1-image'>
-							<p>
-									<img src='<?php echo $instance['image_1'] ?>'>
-							</p>
-						</div>
-						<div class='feature-1-description'>
-							<?php echo wpautop( esc_html( $instance['description_1'] ) ) ?>
-						</div>
-					</div>
-					<div class='feature-area-2 col-md-4 col-xs-12'>
-						<div class='feature-2-title'>
-							<h5><?php echo wpautop( esc_html( $instance['title_2'] ) ) ?>	</h5>
-						</div>
-						<div class='feature-images' id='feature-2-image'>
-							<p>
-									<img src='<?php echo $instance['image_2'] ?>'>
-							</p>
-						</div>
-						<div class='feature-2-description'>
-							<?php echo wpautop( esc_html( $instance['description_2'] ) ) ?>
-						</div>
-					</div>
-					<div class='feature-area-3 col-md-4 col-xs-12'>
-						<div class='feature-3-title'>
-								<h5><?php echo wpautop( esc_html( $instance['title_3'] ) ) ?>	</h5>
-						</div>
-						<div class='feature-images' id='feature-3-image'>
-							<p>
-									<img src='<?php echo $instance['image_3'] ?>'>
-							</p>
-						</div>
-						<div class='feature-3-description'>
-							<?php echo wpautop( esc_html( $instance['description_3'] ) ) ?>
-						</div>
-					</div>
-			</div>
+      <div id='features-widget' class='home-widget'>
+        	<h2 class='features-main-title'><?php echo wpautop( esc_html( $instance['main_title'] ) ) ?></h2>
+          <p class='features-main-description description'><?php echo wpautop( esc_html( $instance['main_description'] ) ) ?></p>
+    			<div class="row">
+    					<div class='feature-area-1 col-md-4 col-xs-12'>
+    						<div class='feature-1-title'>
+    							<h5><?php echo wpautop( esc_html( $instance['title_1'] ) ) ?></h5>
+    						</div>
+    						<div class='feature-images' id='feature-1-image'>
+    							<p>
+    									<img src='<?php echo $instance['image_1'] ?>'>
+    							</p>
+    						</div>
+    						<div class='feature-1-description'>
+    							<?php echo wpautop( esc_html( $instance['description_1'] ) ) ?>
+    						</div>
+    					</div>
+    					<div class='feature-area-2 col-md-4 col-xs-12'>
+    						<div class='feature-2-title'>
+    							<h5><?php echo wpautop( esc_html( $instance['title_2'] ) ) ?>	</h5>
+    						</div>
+    						<div class='feature-images' id='feature-2-image'>
+    							<p>
+    									<img src='<?php echo $instance['image_2'] ?>'>
+    							</p>
+    						</div>
+    						<div class='feature-2-description'>
+    							<?php echo wpautop( esc_html( $instance['description_2'] ) ) ?>
+    						</div>
+    					</div>
+    					<div class='feature-area-3 col-md-4 col-xs-12'>
+    						<div class='feature-3-title'>
+    								<h5><?php echo wpautop( esc_html( $instance['title_3'] ) ) ?>	</h5>
+    						</div>
+    						<div class='feature-images' id='feature-3-image'>
+    							<p>
+    									<img src='<?php echo $instance['image_3'] ?>'>
+    							</p>
+    						</div>
+    						<div class='feature-3-description'>
+    							<?php echo wpautop( esc_html( $instance['description_3'] ) ) ?>
+    						</div>
+    					</div>
+    			</div>
 
 			<?php
 			echo $args['after_widget'];

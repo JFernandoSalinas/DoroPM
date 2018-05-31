@@ -50,7 +50,7 @@ function arphabet_widgets_init() {
 	register_sidebar( array(
 		'name'          => 'Home widget area',
 		'id'            => 'home_widget',
-		'before_widget' => '<div class="widget">',
+		'before_widget' => '<div class="widget-container">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="widget_title">',
 		'after_title'   => '</h2>',
@@ -68,10 +68,19 @@ function arphabet_widgets_init() {
 add_action( 'widgets_init', 'arphabet_widgets_init' );
 
 /**
- * Register features widget.
+ * Register all custom widgets.
  */
 function custom_widgets_init() {
 	include_once( dirname( __FILE__ ) . '/inc/widgets/class-widget-features.php' );
 	register_widget( 'DoroPM_Features' );
+  include_once( dirname( __FILE__ ) . '/inc/widgets/class-widget-image_banner.php' );
+	register_widget( 'DoroPM_Image_Banner' );
+  include_once( dirname( __FILE__ ) . '/inc/widgets/class-widget-call-to-action.php' );
+	register_widget( 'DoroPM_Call_To_Action' );
 }
 add_action( 'widgets_init', 'custom_widgets_init', 20 );
+
+/**
+* add shortcode support for widgets
+*/
+add_filter('widget_text', 'do_shortcode');
