@@ -37,7 +37,7 @@
                 <div class='col-xs-12'>
                   <div class ="banner-content">
                     <h2 class="banner-title"><?php echo wpautop( esc_html( $instance['title'] ) ) ?></h2>
-                    <div class="banner-content-area"><?php echo wpautop( esc_html( $instance['description'] ) ) ?></div>
+                    <div class="banner-content-area"><?php echo wpautop( esc_html( $instance['description'] ) ); echo do_shortcode($instance['shortcode']); ?></div>
                   </div>
                 </div>
               </div>
@@ -76,13 +76,20 @@
     {
         $text_position = $instance['text_position'];
     }
-
+    $shortcode = '';
+    if(isset($instance['shortcode']))
+    {
+        $shortcode = $instance['shortcode'];
+    }
     ?>
     <p>
         <label for="<?php echo $this->get_field_name( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
         <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
     </p>
-
+    <p>
+        <label for="<?php echo $this->get_field_name( 'shortcode' ); ?>"><?php _e( 'Add Contact Form Shortcode:' ); ?></label>
+        <input class="widefat" id="<?php echo $this->get_field_id( 'shortcode' ); ?>" name="<?php echo $this->get_field_name( 'shortcode' ); ?>" type="text" value="<?php echo esc_attr( $shortcode ); ?>" />
+    </p>
     <p>
         <label for="<?php echo $this->get_field_name( 'description' ); ?>"><?php _e( 'Description:' ); ?></label>
         <textarea class="widefat" id="<?php echo $this->get_field_id( 'description' ); ?>" name="<?php echo $this->get_field_name( 'description' ); ?>" type="text" ><?php echo esc_attr( $description ); ?></textarea>
