@@ -15,6 +15,7 @@ function enqueue_scripts() {
     wp_enqueue_script( 'jqslim', get_template_directory_uri() . '/js/vendor/jquery-3.3.1.slim.min.js' );
     wp_enqueue_script( 'popper', get_template_directory_uri() . '/js/vendor/popper.min.js' );
     wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js' );
+    wp_enqueue_script('ionicons', 'https://unpkg.com/ionicons@4.1.2/dist/ionicons.js');
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_scripts');
 

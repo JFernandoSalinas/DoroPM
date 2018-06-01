@@ -94,16 +94,27 @@ position:relative;
     background: #505962;
 }
 .contact-details {
+    padding-top: 5px;
+    padding-bottom: 5px;
     text-align: right;
 }
 .contact-details h4 {
    color:#fff;
-   margin-right: 33%;
+   margin-right: 7%;
    font-weight: 400;
+   display:inline;
 }
-.ion-android-call:before {
+.ion-android-call:before, .ion-mail {
     margin-right: 5px;
 }
+.contact-details.col-xs-12.col-md-7 a:link {
+    color: white;
+    text-decoration: none;
+}
+.icon-inner svg{
+  padding-top: 3px;
+}
+
 /*CSS for sub-menu*/
 ul.sub-menu {
   width:160%;

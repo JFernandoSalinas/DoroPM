@@ -34,8 +34,8 @@
         </button>
       </nav>
       <div class="bottom-nav-div row">
-        <div class='weather-widget col-xs-12 col-md-6'><div id="plemx-root"></div></div>
-        <div class="contact-details col-xs-12 col-md-6"><h4 class="icon ion-android-call"><a>416-897-8142</a></h4></i></div>
+        <div class='weather-widget col-xs-12 col-md-5'><div id="plemx-root"></div></div>
+        <div class="contact-details col-xs-12 col-md-7"><h4><ion-icon name="mail-open"></ion-icon><a href='mailto:luis.teodoro@doropm.com'>Email: luis.teodoro@doropm.com</a></h4><h4><ion-icon name="call"></ion-icon><a href='tel:416-897-8142'>Call Us: 416-897-8142</a></h4></div>
      </div>
       <div class="custom-header-bg">
       <!--Add Header image to page.-->
