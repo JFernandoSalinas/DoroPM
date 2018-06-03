@@ -331,3 +331,10 @@ div.feature-images img {
     width: 100% !important;
     height: 200px !important;
 }
+
+/*Css for static page content*/
+div#page-content {
+    margin: 5em 10em;
+    padding: 3em 5em;
+    border: 1px solid #ccd1d6;
+}
