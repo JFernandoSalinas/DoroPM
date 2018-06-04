@@ -30,7 +30,7 @@
 	public function widget( $args, $instance ) {
 		// outputs the content of the widget
     ?>
-    <div id='image-banner'class='-home-widget'>
+    <div id='image-banner'class='home-widget'>
       <div class='image-cover'style="background-image:url(<?php echo  $instance['image']   ?>)">
           <container>
               <div class='row'>

@@ -32,14 +32,11 @@ class DoroPM_Call_To_Action extends WP_Widget {
 		?>
 		<div id='call-to-action' class='home-widget'>
 			<div class='call-to-action'>
-				<div class='container'>
+				<div class='container text-center'>
 					<div class='row'>
-						<div class='col-sm-12 col-md-8 col-lg-9'>
+						<div class='col-sm-12 col-md-12 col-lg-12'>
 							<h2 class='cta-title'><?php echo wpautop( esc_html( $instance['title'] ) ) ?></h2>
 							<p class='cta-description description'><?php echo wpautop( esc_html( $instance['description'] ) ) ?></p>
-						</div>
-						<div class='cta-button col-sm-12 col-md-4 col-lg-3'>
-							<a class='button' href='#'>Get a Quote!</a>
 						</div>
 					</div>
 				</div>
@@ -63,12 +60,6 @@ class DoroPM_Call_To_Action extends WP_Widget {
         $description = $instance['description'];
     }
 
-    $image = '';
-    if(isset($instance['button-url']))
-    {
-        $buttonUrl = $instance['button-url'];
-    }
-
 
 
     ?>
@@ -82,10 +73,6 @@ class DoroPM_Call_To_Action extends WP_Widget {
         <textarea class="widefat" id="<?php echo $this->get_field_id( 'description' ); ?>" name="<?php echo $this->get_field_name( 'description' ); ?>" type="text" ><?php echo esc_attr( $description ); ?></textarea>
     </p>
 
-		<p>
-        <label for="<?php echo $this->get_field_name( 'button-url' ); ?>"><?php _e( 'Button URL:' ); ?></label>
-        <input class="widefat" id="<?php echo $this->get_field_id( 'button-url' ); ?>" name="<?php echo $this->get_field_name( 'button-url' ); ?>" type="text" ><?php echo esc_attr( $buttonUrl ); ?></input>
-    </p>
    <?php
 
 	}

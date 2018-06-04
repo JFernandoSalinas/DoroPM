@@ -39,12 +39,14 @@
      </div>
       <div class="custom-header-bg">
       <!--Add Header image to page.-->
-            <div id="header-wrap" class="header-wrap" style="background-image: url('<?php the_post_thumbnail_url(array(700, 9999));?>')">
-             <header class="entry-header">
-               <h1 class="entry-title">
-                 <?php the_title();rewind_posts();?>
-               </h1>
-               <?php if(is_front_page()){ echo apply_filters( 'the_content', get_post( get_option( 'page_on_front' ) )->post_content ); }?>
-            </header>
+            <div id="header-wrap" class="header-wrap row" style="background-image: url('<?php the_post_thumbnail_url(array(700, 9999));?>')">
+<div class='col-md-2'></div>
+              <div class='col-md-4'>
+               <header class="entry-header">
+                 <h1 class="entry-title">
+                   <?php the_title();rewind_posts();?>
+                 </h1>
+                 <?php if(is_front_page()){ echo apply_filters( 'the_content', get_post( get_option( 'page_on_front' ) )->post_content ); }?>
+              </header>
         </div>
        </div>

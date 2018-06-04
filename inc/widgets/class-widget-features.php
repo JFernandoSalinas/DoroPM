@@ -29,9 +29,11 @@ public function widget( $args, $instance ) {
 	// outputs the content of the widget
 
 			?>
-      <div id='features-widget' class='home-widget'>
-        	<h2 class='features-main-title'><?php echo wpautop( esc_html( $instance['main_title'] ) ) ?></h2>
+      <div id='features-widget' class='home-widget widget-col'>
+        <div class='text-center'>
+        	<h2 class='features-main-title'><span><?php echo  $instance['main_title']; ?></span></h2>
           <p class='features-main-description description'><?php echo wpautop( esc_html( $instance['main_description'] ) ) ?></p>
+        </div>
     			<div class="row">
     					<div class='feature-area-1 col-md-4 col-xs-12'>
     						<div class='feature-1-title'>

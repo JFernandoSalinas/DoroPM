@@ -35,7 +35,48 @@ header.entry-header p {
   position: relative;
   padding-top: 5em;
   padding-bottom: 5em;
+  margin-bottom: 120px;
 }
+/*Contact Form Styling
+Homepage and Other Pages
+*/
+
+/* CF Homepage styling*/
+
+div#home-form div.wpcf7 {
+    position: absolute !important;
+    top: -150px;
+    left: 5%
+}
+div#home-form textarea.wpcf7-form-control.wpcf7-textarea {
+    height: 10em;
+}
+div#home-form label {
+    text-align: left;
+    font-weight: 600;
+}
+div#home-form div.wpcf7 {
+  color:white;
+  padding:2% 5%;
+  background-color: #505962;
+  border: 5px solid #faed51;
+  padding-bottom: 0;
+  z-index: 6;
+}
+div#home-form input.wpcf7-form-control.wpcf7-submit:hover {
+    background: rgb(239, 226, 78);
+}
+div#home-form input.wpcf7-form-control.wpcf7-submit {
+    background: rgb(218, 206, 74);
+    color: white;
+    border: rgb(239, 226, 78);
+    width: 100%;
+    padding: 2%;
+    font-size: 20px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
 /*weather widget font adjustment*/
 #plemx-root .temp {
     font-size: 16px;
@@ -203,7 +244,6 @@ ul#menu-primary>li:hover:before>.sub-menu {
    overflow-y:hidden;
 }
 
-
 .header-wrap::after{
   content: ' ';
   position: absolute;
@@ -242,30 +282,32 @@ ul#menu-primary>li:hover:before>.sub-menu {
 
 }
 /* WIDGET STYLING */
-.widget{
+.home-widget{
   margin-top: 4em;
 }
-/*homepage widget area desktop marding*/
-@media (min-width: 768px){
-    div#homepage-widget-area .widget {
-        max-width: 768px;
-    }
+
+/*features widget Styling */
+
+/*since it is at the top eliminating margin/*/
+div#features-widget {
+    margin-top: 1%;
 }
-@media (min-width: 992px){
-    div#homepage-widget-area .widget {
-        max-width: 970px;
-    }
+div#features-widget h2.features-main-title span {
+    background: #fff;
+    z-index: 1;
+    padding: 10px 15px;
 }
-@media (min-width: 1200px){
-    div#homepage-widget-area .widget {
-        max-width: 1170px;
-    }
-}
-  div#homepage-widget-area .widget {
-      margin-right: auto;
-      margin-left: auto;
-      padding-left: 15px;
-      padding-right: 15px;
+h2.features-main-title:before{
+    content: '';
+    position: absolute;
+    margin-top: 20px;
+    height: 1px;
+    width: 50%;
+    left: 0;
+    z-index: -1;
+    border-bottom: 1px solid #cecece;
+    margin-left: 25%;
+
 }
 /*Image Banner Styking */
 .image-banner.widget{
@@ -301,9 +343,7 @@ footer.site-footer {
     padding-top: 2%;
     border-top: 1px solid #c9ced4;
 }
-footer.site-footer .col-xs-12.col-md-2 {
-    text-align: center;
-}
+
 footer .col-xs-12.col-md-5 p {
     float: right;
 }
@@ -337,4 +377,33 @@ div#page-content {
     margin: 5em 10em;
     padding: 3em 5em;
     border: 1px solid #ccd1d6;
+}
+
+/*General class stylind
+ **Can be re-used**
+*/
+.text-center{
+  text-align: center;
+}
+/*homepage widget area desktop marding*/
+@media (min-width: 768px){
+.widget-col{
+        max-width: 768px;
+    }
+}
+@media (min-width: 992px){
+.widget-col{
+        max-width: 970px;
+    }
+}
+@media (min-width: 1200px){
+.widget-col{
+        max-width: 1170px;
+    }
+}
+  .widget-col {
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 15px;
+      padding-right: 15px;
 }

@@ -29,7 +29,7 @@
 						?>
 					</p>
 			  </div>
-				<div class="col-xs-12 col-md-2">
+				<div class="col-xs-12 col-md-2 text-center">
 				  <p id="smoothup"><i class="icon ion-arrow-up-c"></i></p>
 				</div>
 		</div><!-- .site-info -->
