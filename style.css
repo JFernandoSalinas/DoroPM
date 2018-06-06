@@ -46,17 +46,18 @@ Homepage and Other Pages
 div#home-form div.wpcf7 {
     position: absolute !important;
     top: -150px;
-    left: 5%
+    left: -10%;
 }
 div#home-form textarea.wpcf7-form-control.wpcf7-textarea {
     height: 10em;
 }
 div#home-form label {
     text-align: left;
-    font-weight: 600;
+    font-weight: 400;
 }
 div#home-form div.wpcf7 {
   color:white;
+  width: 420px;
   padding:2% 5%;
   background-color: #505962;
   border: 5px solid #faed51;
@@ -318,6 +319,13 @@ h2.features-main-title:before{
   background-position: center center;
   background-size: cover;
 }
+/*decrease width of the image banner row. As it goes beyond the screen and add gradent overlay*/
+div#image-banner .row {
+    max-width: 100.8%;
+    content: ' ';
+    background: rgba(0,0,0,.25) !important;
+    z-index: 5;
+}
 .banner-content {
   margin-left: auto;
 }
@@ -337,6 +345,7 @@ h2.banner-title{
       padding-bottom: 10em;
   }
 }
+
 /*---Footer Area----*/
 footer.site-footer {
     margin: 1%;
@@ -371,7 +380,10 @@ div.feature-images img {
     width: 100% !important;
     height: 200px !important;
 }
-
+/*Call To Action Widget*/
+h2.cta-title {
+    font-size: 1.9em;
+}
 /*Css for static page content*/
 div#page-content {
     margin: 5em 10em;
@@ -406,4 +418,49 @@ div#page-content {
       margin-left: auto;
       padding-left: 15px;
       padding-right: 15px;
+}
+
+/*Font Used for website */
+* {
+    font-family: 'Signika', sans-serif;
+}
+.feature-images{
+  position: relative;
+  width: 100%;
+}
+.feature-images .img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.feature-title{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(129, 129, 130, .45);
+}
+div.feature-description {
+    border: .5px solid rgba(129, 129, 130, 0.44);
+    padding: 5%;
+    height: 250px;
+    border-top: #fff;
+}
+.feature-images:hover .feature-title{
+  opacity: 1;
+}
+.feature-images h5{
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
 }

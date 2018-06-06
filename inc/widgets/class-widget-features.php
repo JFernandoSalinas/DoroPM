@@ -36,41 +36,35 @@ public function widget( $args, $instance ) {
         </div>
     			<div class="row">
     					<div class='feature-area-1 col-md-4 col-xs-12'>
-    						<div class='feature-1-title'>
-    							<h5><?php echo wpautop( esc_html( $instance['title_1'] ) ) ?></h5>
-    						</div>
     						<div class='feature-images' id='feature-1-image'>
-    							<p>
     									<img src='<?php echo $instance['image_1'] ?>'>
-    							</p>
+                      <div class='feature-title'id='feature-1-title'>
+                        <h5><?php echo wpautop( esc_html( $instance['title_1'] ) ) ?></h5>
+                      </div>
     						</div>
-    						<div class='feature-1-description'>
+    					<div class='feature-description' id='feature-1-description'>
     							<?php echo wpautop( esc_html( $instance['description_1'] ) ) ?>
     						</div>
     					</div>
     					<div class='feature-area-2 col-md-4 col-xs-12'>
-    						<div class='feature-2-title'>
-    							<h5><?php echo wpautop( esc_html( $instance['title_2'] ) ) ?>	</h5>
-    						</div>
     						<div class='feature-images' id='feature-2-image'>
-    							<p>
     									<img src='<?php echo $instance['image_2'] ?>'>
-    							</p>
+                      <div class='feature-title'>
+          							<h5><?php echo wpautop( esc_html( $instance['title_2'] ) ) ?>	</h5>
+          						</div>
     						</div>
-    						<div class='feature-2-description'>
+    						<div class='feature-description' id='feature-2-description'>
     							<?php echo wpautop( esc_html( $instance['description_2'] ) ) ?>
     						</div>
     					</div>
     					<div class='feature-area-3 col-md-4 col-xs-12'>
-    						<div class='feature-3-title'>
-    								<h5><?php echo wpautop( esc_html( $instance['title_3'] ) ) ?>	</h5>
-    						</div>
     						<div class='feature-images' id='feature-3-image'>
-    							<p>
     									<img src='<?php echo $instance['image_3'] ?>'>
-    							</p>
+                      <div class='feature-title'id='feature-3-title'>
+          								<h5><?php echo wpautop( esc_html( $instance['title_3'] ) ) ?>	</h5>
+          						</div>
     						</div>
-    						<div class='feature-3-description'>
+    						<div class='feature-description' id='feature-3-description'>
     							<?php echo wpautop( esc_html( $instance['description_3'] ) ) ?>
     						</div>
     					</div>

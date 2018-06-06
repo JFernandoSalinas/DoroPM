@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
+    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
     <title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
 
     <meta name="description" content="">
@@ -40,8 +40,8 @@
       <div class="custom-header-bg">
       <!--Add Header image to page.-->
             <div id="header-wrap" class="header-wrap row" style="background-image: url('<?php the_post_thumbnail_url(array(700, 9999));?>')">
-<div class='col-md-2'></div>
-              <div class='col-md-4'>
+              <div class='col-md-2'></div>
+              <div class='col-md-6'>
                <header class="entry-header">
                  <h1 class="entry-title">
                    <?php the_title();rewind_posts();?>
