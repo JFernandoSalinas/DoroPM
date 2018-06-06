@@ -34,10 +34,10 @@
       <div class='image-cover'style="background-image:url(<?php echo  $instance['image']   ?>)">
           <container>
               <div class='row'>
-                <div class='col-xs-12'>
+                <div class='col-md-12 col-xs-12'>
                   <div class ="banner-content">
                     <h2 class="banner-title"><?php echo wpautop( esc_html( $instance['title'] ) ) ?></h2>
-                    <div class="banner-content-area"><?php echo wpautop( esc_html( $instance['description'] ) ); echo do_shortcode($instance['shortcode']); ?></div>
+                    <div class="banner-content-area"><?php echo wpautop( esc_html( $instance['description'] ) ); ?> <span id='image-button'><p><a href ='http://doropm.com/contact-us/'class='button-link'>Get In Touch</a></p></div>
                   </div>
                 </div>
               </div>

@@ -47,11 +47,16 @@ Homepage and Other Pages
 */
 
 /* CF Homepage styling*/
-
+@media (min-width: 768px){
 div#home-form div.wpcf7 {
     position: absolute !important;
     top: -150px;
     left: -10%;
+}
+div#home-form div.wpcf7 {
+  color:white;
+  width: 420px;
+}
 }
 div#home-form textarea.wpcf7-form-control.wpcf7-textarea {
     height: 10em;
@@ -62,7 +67,7 @@ div#home-form label {
 }
 div#home-form div.wpcf7 {
   color:white;
-  width: 420px;
+
   padding:2% 5%;
   background-color: #505962;
   border: 5px solid #faed51;
@@ -389,10 +394,22 @@ h2.banner-title{
   text-align: center;
   color: #fff;
 }
-
+a.button-link {
+    background: rgb(218, 206, 74);
+    width: 100%;
+    padding: .5% 1%;
+    font-size: 16px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    border: 2px solid #505962;
+    color:#fff !important;
+}
+a.button-link:hover {
+    background: #faed51;
+    color:#fff !important;
+}
 @media (min-width: 992px){
   .banner-content {
-      max-width: 75%;
       padding-top: 10em;
       padding-bottom: 10em;
   }
