@@ -13,6 +13,11 @@ This theme, like WordPress, is licensed under the GPL.
 /*Aligh widget title and description*/
 
 /*Mobile Resolution */
+@media (max-width: 768px){
+    ul#menu-primary {
+        display: none;
+    }
+}
 .header-wrap h1.entry-title {
   position:relative;
   z-index: 6;
@@ -188,7 +193,11 @@ ul.sub-menu {
   z-index:1;
   opacity:1;
 }
-
+@media (max-width: 1200px)(min-width: 992px){
+  .contact-details.col-xs-12.col-md-7 h4 {
+      font-size: 18px;
+  }
+}
 /*Menu Link styling and hover effect */
 
 ul#menu-primary > li > a{
@@ -289,6 +298,49 @@ ul#menu-primary>li:hover:before>.sub-menu {
 
 /*features widget Styling */
 
+/*features hover effect*/
+.feature-images{
+  position: relative;
+  width: 100%;
+}
+.feature-images .img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.feature-title{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(129, 129, 130, .45);
+}
+div.feature-description {
+    border: .5px solid rgba(108, 117, 125, 0.7);
+    padding: 5%;
+    height: 250px;
+    border-top: #fff;
+}
+.feature-images:hover .feature-title{
+  opacity: 1;
+}
+.feature-images h5{
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
 /*since it is at the top eliminating margin/*/
 div#features-widget {
     margin-top: 1%;
@@ -381,8 +433,12 @@ div.feature-images img {
     height: 200px !important;
 }
 /*Call To Action Widget*/
+@media  (min-width: 992px){
 h2.cta-title {
-    font-size: 1.9em;
+    font-size: 1.9em !important;
+}
+h2.cta-title p {
+    font-size: 1.5em !important;
 }
 /*Css for static page content*/
 div#page-content {
@@ -423,44 +479,4 @@ div#page-content {
 /*Font Used for website */
 * {
     font-family: 'Signika', sans-serif;
-}
-.feature-images{
-  position: relative;
-  width: 100%;
-}
-.feature-images .img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.feature-title{
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: rgba(129, 129, 130, .45);
-}
-div.feature-description {
-    border: .5px solid rgba(129, 129, 130, 0.44);
-    padding: 5%;
-    height: 250px;
-    border-top: #fff;
-}
-.feature-images:hover .feature-title{
-  opacity: 1;
-}
-.feature-images h5{
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
 }

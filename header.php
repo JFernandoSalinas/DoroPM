@@ -30,12 +30,16 @@
             <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon">
+            <div class="primary mobile-nav-menu">
+                <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+            </div>
+          </span>
         </button>
       </nav>
       <div class="bottom-nav-div row">
         <div class='weather-widget col-xs-12 col-md-5'><div id="plemx-root"></div></div>
-        <div class="contact-details col-xs-12 col-md-7"><h4><ion-icon name="mail-open"></ion-icon><a href='mailto:luis.teodoro@doropm.com'>Email: luis.teodoro@doropm.com</a></h4><h4><ion-icon name="call"></ion-icon><a href='tel:416-897-8142'>Call Us: 416-897-8142</a></h4></div>
+        <div class="contact-details col-xs-12 col-md-7"><h4><ion-icon name="mail-open"></ion-icon><a href='mailto:info@doropm.com'>Email: info@doropm.com</a><ion-icon name="call"></ion-icon><a href='tel:647-220-1267'>Call Us: 647-220-1267</a></h4></div>
      </div>
       <div class="custom-header-bg">
       <!--Add Header image to page.-->

@@ -22,12 +22,9 @@
 						</p>
 				</div>
 				<div class="col-xs-12 col-md-5">
-					<p>
-						<?php
-						/* translators: 1: Theme name, 2: Theme author. */
-						printf( esc_html__( 'Designed and developed by %1$s.' ), '<a href="http://fersatos.com/">FERSATOS</a>' );
-						?>
-					</p>
+					<div class=footer-contact>
+						<p>Contact Us For a Free Quote <ion-icon name="mail-open"></ion-icon><a href='mailto:info@doropm.com'>Email: info@doropm.com</a><ion-icon name="call"></ion-icon><a href='tel:647-220-1267'>Call Us: 647-220-1267</a></p>
+					</div>
 			  </div>
 				<div class="col-xs-12 col-md-2 text-center">
 				  <p id="smoothup"><i class="icon ion-arrow-up-c"></i></p>
