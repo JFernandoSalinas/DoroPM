@@ -35,7 +35,7 @@ class DoroPM_Call_To_Action extends WP_Widget {
 				<div class='container text-center'>
 					<div class='row'>
 						<div class='col-sm-12 col-md-12 col-lg-12'>
-							<h2 class='cta-title'><?php echo wpautop( esc_html( $instance['title'] ) ) ?></h2>
+							<h2 class='cta-title'><?php echo  $instance['title']   ?></h2>
 							<p class='cta-description description'><?php echo wpautop( esc_html( $instance['description'] ) ) ?></p>
 						</div>
 					</div>

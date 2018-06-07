@@ -11,12 +11,158 @@ Tags:
 This theme, like WordPress, is licensed under the GPL.
 */
 /*Aligh widget title and description*/
+.row{
+  width: 100%;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+h5{
+  margin-bottom: 0;
 
+}
 /*Mobile Resolution */
-@media (max-width: 768px){
+@media (max-width: 992px){
+  iv#features-widget h2.features-main-title span {
+      background: #fff;
+      z-index: 1;
+      padding: 10px 15px;
+  }
+  h2.features-main-title span {
+    padding: 2%;
+}
+  h2.features-main-title:before{
+      content: '';
+      position: absolute;
+      margin-top: 13px;
+      height: 1px;
+      width: 50%;
+      left: 0;
+      z-index: -1;
+      border-bottom: 1px solid #cecece;
+      margin-left: 25%;
+
+  }
+  div#image-banner .row {
+      content: ' ';
+      background: rgba(0,0,0,.25) !important;
+      z-index: 5;
+  }
+  .widget-col {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+  .contact-details.col-xs-12.col-md-8 {
+    text-align: center;
+}
+  a.button-link {
+      background: transparent;
+      width: 100%;
+      padding: .5% 1%;
+      font-size: 16px;
+      font-weight: bolder;
+      text-transform: uppercase;
+      border: 2px solid #fff;
+      color:#fff !important;
+      text-decoration:none;
+      color:#FFF;
+  }
+  a.button-link:hover {
+      background: #fff;
+      color: #505962 !important;
+  }
+
+    .banner-content {
+    padding-bottom: 5em;
+    padding-top: 5em;
+}
+
+.banner-content {
+    text-align: center;
+}
+.banner-content h2, .banner-content p {
+    color: white;
+}
+div.feature-description {
+    border: .5px solid rgba(108, 117, 125, 0.7);
+    padding: 3%;
+    height: 275px;
+    border-top: #fff;
+
+    margin: 0;
+    margin-bottom: 5%
+}
     ul#menu-primary {
         display: none;
     }
+    h2{font-size: 1.3em;}
+    p {
+    font-size: 14px;
+    text-align: center;
+}
+footer.site-footer {
+    margin: 5%;
+    padding-top: 5%;
+    border-top: 1px solid #c9ced4;
+}
+h4 {
+    font-size: 20px;
+    text-align: center;
+}
+.call-to-action {
+    margin-top: 5%;
+}
+.contact-details span:after {
+  content: "\A";
+   white-space: pre;
+}
+div#header-wrap {
+    margin: 0;
+}
+
+div#wpcf7-f70-o1 {
+    position: relative;
+}
+div#header-wrap {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+div#features-widget {
+    margin: 5%;
+    margin-top: 10%;
+}
+.feature-description {
+    margin: 5%;
+}
+div.feature-title p {
+    font-size: 18px;
+    line-height: 30px;
+}
+div.feature-title {
+    background: yellow;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+div#home-form div.wpcf7 {
+  width: 350px;
+  margin: 0 auto;
+}
+.ion-arrow-up-c:before {
+    font-size: 2em;
+    position: relative;
+    top: 5px;
+}
+.ion-arrow-up-c{
+    padding:15px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.3);
+    position: relative;
+    top: -10px;
+    transition: top ease 0.8s;
+}
+
 }
 .header-wrap h1.entry-title {
   position:relative;
@@ -47,9 +193,9 @@ Homepage and Other Pages
 */
 
 /* CF Homepage styling*/
-@media (min-width: 768px){
+@media (min-width: 992px){
 div#home-form div.wpcf7 {
-    position: absolute !important;
+    position: absolute ;
     top: -150px;
     left: -10%;
 }
@@ -67,7 +213,6 @@ div#home-form label {
 }
 div#home-form div.wpcf7 {
   color:white;
-
   padding:2% 5%;
   background-color: #505962;
   border: 5px solid #faed51;
@@ -139,9 +284,7 @@ position:relative;
 }
 
 /*CSS for the Bottom Nav*/
-.bottom-nav-div.row {
-    width: 100.8%;
-}
+
 .bottom-nav-div.row {
     background: #505962;
 }
@@ -159,7 +302,7 @@ position:relative;
 .ion-android-call:before, .ion-mail {
     margin-right: 5px;
 }
-.contact-details.col-xs-12.col-md-7 a:link {
+.contact-details.col-md-8 a:link {
     color: white;
     text-decoration: none;
 }
@@ -199,7 +342,7 @@ ul.sub-menu {
   opacity:1;
 }
 @media (max-width: 1200px)(min-width: 992px){
-  .contact-details.col-xs-12.col-md-7 h4 {
+  .contact-details.col-xs-12.col-md-8 h4 {
       font-size: 18px;
   }
 }
@@ -345,7 +488,6 @@ div.feature-description {
   text-align: center;
 }
 
-
 /*since it is at the top eliminating margin/*/
 div#features-widget {
     margin-top: 1%;
@@ -378,7 +520,7 @@ h2.features-main-title:before{
 }
 /*decrease width of the image banner row. As it goes beyond the screen and add gradent overlay*/
 div#image-banner .row {
-    max-width: 100.8%;
+
     content: ' ';
     background: rgba(0,0,0,.25) !important;
     z-index: 5;
@@ -395,18 +537,20 @@ h2.banner-title{
   color: #fff;
 }
 a.button-link {
-    background: rgb(218, 206, 74);
+    background: transparent;
     width: 100%;
     padding: .5% 1%;
     font-size: 16px;
     font-weight: bolder;
     text-transform: uppercase;
-    border: 2px solid #505962;
+    border: 2px solid #fff;
     color:#fff !important;
+    text-decoration:none;
+    color:#FFF;
 }
 a.button-link:hover {
-    background: #faed51;
-    color:#fff !important;
+    background: #fff;
+    color: #505962 !important;
 }
 @media (min-width: 992px){
   .banner-content {
@@ -448,6 +592,11 @@ i.icon.ion-arrow-up-c:hover  {
 div.feature-images img {
     width: 100% !important;
     height: 200px !important;
+}
+
+div.feature-images img{
+  width: 100% !important;
+  overflow: hidden !important;
 }
 /*Call To Action Widget*/
 @media  (min-width: 992px){

@@ -38,14 +38,14 @@
         </button>
       </nav>
       <div class="bottom-nav-div row">
-        <div class='weather-widget col-xs-12 col-md-5'><div id="plemx-root"></div></div>
-        <div class="contact-details col-xs-12 col-md-7"><h4><ion-icon name="mail-open"></ion-icon><a href='mailto:info@doropm.com'>Email: info@doropm.com</a><ion-icon name="call"></ion-icon><a href='tel:647-220-1267'>Call Us: 647-220-1267</a></h4></div>
+        <div class='weather-widget col-xs-12 col-md-4'><div id="plemx-root"></div></div>
+        <div class="contact-details col-xs-12 col-md-8"><h4><ion-icon name="mail-open"></ion-icon><a href='mailto:info@doropm.com'>Email: info@doropm.com</a></h4><span id='break'></span><h4><ion-icon name="call"></ion-icon><a href='tel:647-220-1267'>Call Us: 647-220-1267</a></h4></div>
      </div>
       <div class="custom-header-bg">
       <!--Add Header image to page.-->
             <div id="header-wrap" class="header-wrap row" style="background-image: url('<?php the_post_thumbnail_url(array(700, 9999));?>')">
-              <div class='col-md-2'></div>
-              <div class='col-md-6'>
+              <div class='col-lg-2'></div>
+              <div class='col-lg-6'>
                <header class="entry-header">
                  <h1 class="entry-title">
                    <?php the_title();rewind_posts();?>

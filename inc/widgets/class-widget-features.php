@@ -37,9 +37,9 @@ public function widget( $args, $instance ) {
     			<div class="row">
     					<div class='feature-area-1 col-md-4 col-xs-12'>
     						<div class='feature-images' id='feature-1-image'>
-    									<img src='<?php echo $instance['image_1'] ?>'>
+    									<img style='width:100%;' class='col-xs-12'src='<?php echo $instance['image_1'] ?>'>
                       <div class='feature-title'id='feature-1-title'>
-                        <h5><?php echo wpautop( esc_html( $instance['title_1'] ) ) ?></h5>
+                        <h5><?php echo  $instance['title_1']?></h5>
                       </div>
     						</div>
     					<div class='feature-description' id='feature-1-description'>
@@ -48,9 +48,9 @@ public function widget( $args, $instance ) {
     					</div>
     					<div class='feature-area-2 col-md-4 col-xs-12'>
     						<div class='feature-images' id='feature-2-image'>
-    									<img src='<?php echo $instance['image_2'] ?>'>
+    									<img style='width:100%;'src='<?php echo $instance['image_2'] ?>'>
                       <div class='feature-title'>
-          							<h5><?php echo wpautop( esc_html( $instance['title_2'] ) ) ?>	</h5>
+          							<h5><?php echo  $instance['title_2'] ?>	</h5>
           						</div>
     						</div>
     						<div class='feature-description' id='feature-2-description'>
@@ -59,9 +59,9 @@ public function widget( $args, $instance ) {
     					</div>
     					<div class='feature-area-3 col-md-4 col-xs-12'>
     						<div class='feature-images' id='feature-3-image'>
-    									<img src='<?php echo $instance['image_3'] ?>'>
+    									<img style='width:100%;'class='col-xs-12'src='<?php echo $instance['image_3'] ?>'>
                       <div class='feature-title'id='feature-3-title'>
-          								<h5><?php echo wpautop( esc_html( $instance['title_3'] ) ) ?>	</h5>
+          								<h5><?php echo  $instance['title_3']  ?>	</h5>
           						</div>
     						</div>
     						<div class='feature-description' id='feature-3-description'>
