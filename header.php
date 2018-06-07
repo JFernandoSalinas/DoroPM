@@ -29,13 +29,12 @@
         <div class="primary nav-menu">
             <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
         </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon">
-            <div class="primary mobile-nav-menu">
-                <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
-            </div>
-          </span>
-        </button>
+        <div class="primary nav-menu-mobile">
+            <ion-icon id='mobile-menu' name="menu"></ion-icon>
+            <ion-icon id='mobile-close'name="close"></ion-icon>
+            <?php wp_nav_menu( array( 'theme_location' => 'mobile-menu' ) ); ?>
+        </div>
+
       </nav>
       <div class="bottom-nav-div row">
         <div class='weather-widget col-xs-12 col-md-4'><div id="plemx-root"></div></div>

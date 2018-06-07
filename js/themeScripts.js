@@ -62,3 +62,18 @@ jQuery(document).ready(function($) {
             parent.find('.wp-color-result').click();
         });
 });
+jQuery(document).ready(function(){
+  $('.menu-mobile-container').hide();
+   $("#mobile-menu").click(function(){
+   $(this).hide();
+    $('.menu-mobile-container').show();
+   $('#mobile-close').show();
+});
+
+
+$("#mobile-close").click(function(){
+   $(this).hide();
+   $('.menu-mobile-container').hide();
+   $('#mobile-menu').show();
+});
+});

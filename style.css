@@ -283,6 +283,43 @@ position:relative;
   background:#5c6166;
 }
 
+/*mobile menu styling*/
+ion-icon#mobile-menu {
+    font-size: 2em;
+    color: white;
+    z-index: 50;
+    text-align: right;
+}
+ion-icon#mobile-close {
+    font-size: 2em;
+    color: white;
+    display: none;
+    z-index: 50;
+    text-align: right;
+}
+.primary.nav-menu-mobile {
+    margin: auto;
+}
+.mobile-menu{
+    display: none;
+}
+@media only screen and (min-width: 769px){
+    .desktop-menu{
+        display: block !important;
+    }
+    .mobile-menu{
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .desktop-menu{
+        display: none !important;
+    }
+    .mobile-menu{
+        display: block !important;
+    }
+}
 /*CSS for the Bottom Nav*/
 
 .bottom-nav-div.row {
@@ -303,6 +340,10 @@ position:relative;
     margin-right: 5px;
 }
 .contact-details.col-md-8 a:link {
+    color: white;
+    text-decoration: none;
+}
+.primary.nav-menu-mobile a:link {
     color: white;
     text-decoration: none;
 }
@@ -345,6 +386,24 @@ ul.sub-menu {
   .contact-details.col-xs-12.col-md-8 h4 {
       font-size: 18px;
   }
+}
+@media (min-width: 992px){
+.primary.nav-menu-mobile {
+    display: none;
+}
+}
+ul#menu-mobile {
+  position: absolute;
+  background: darkgray;
+  width: 100%;
+  left: 0;
+  padding: 0%;
+}
+ul#menu-mobile li {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border: 1px solid black;
+    text-align: center;
 }
 /*Menu Link styling and hover effect */
 
@@ -508,6 +567,22 @@ h2.features-main-title:before{
     border-bottom: 1px solid #cecece;
     margin-left: 25%;
 
+}
+.page-template-default input.wpcf7-form-control.wpcf7-submit {
+    background: rgb(218, 206, 74);
+    color: white;
+    border: rgb(239, 226, 78);
+    width: 200px;
+    padding: 2%;
+    font-size: 20px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+h2#contact-top {
+    margin-bottom: 5%;
+}
+div#text-contact {
+    margin-top: 25%;
 }
 /*Image Banner Styking */
 .image-banner.widget{
