@@ -22,7 +22,40 @@ h5{
 }
 /*Mobile Resolution */
 @media (max-width: 992px){
-  iv#features-widget h2.features-main-title span {
+  h2.features-main-title:before{
+      content: '';
+      position: absolute;
+      margin-top: 20px;
+      height: 1px;
+      width: 50%;
+      left: 0;
+      z-index: -1;
+      border-bottom: 1px solid #cecece;
+      margin-left: 25%;
+
+  }
+  div#page-content {
+    margin: 2em 4em;
+    padding: 1em 2em;
+    border: 1px solid #ccd1d6;
+}
+  .page-template-default input.wpcf7-form-control.wpcf7-submit {
+      background: rgb(218, 206, 74);
+      color: white;
+      border: rgb(239, 226, 78);
+      width: 200px;
+      padding: 2%;
+      font-size: 20px;
+      font-weight: bolder;
+      text-transform: uppercase;
+  }
+  h2#contact-top {
+      margin-bottom: 5%;
+  }
+  div#text-contact {
+      margin-top: 25%;
+  }
+  div#features-widget h2.features-main-title span {
       background: #fff;
       z-index: 1;
       padding: 10px 15px;
