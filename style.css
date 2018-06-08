@@ -39,7 +39,7 @@ h5{
     width: 100%;
 }
   div#page-content {
-    margin: 2em 4em;
+    margin: 2em 2em;
     padding: 1em 2em;
     border: 1px solid #ccd1d6;
 }
@@ -79,6 +79,9 @@ h5{
       margin-left: 25%;
 
   }
+  div#wpcf7-f107-p18-o1 h3 {
+    text-align: center;
+}
   div#image-banner .row {
       content: ' ';
       background: rgba(0,0,0,.25) !important;
@@ -124,9 +127,8 @@ h5{
 div.feature-description {
     border: .5px solid rgba(108, 117, 125, 0.7);
     padding: 3%;
-    height: 275px;
+    height: 225px;
     border-top: #fff;
-
     margin: 0;
     margin-bottom: 5%
 }
@@ -137,6 +139,9 @@ div.feature-description {
     p {
     font-size: 14px;
     text-align: center;
+}
+div.feature-description p {
+  text-align: left !important;
 }
 footer.site-footer {
     margin: 5%;
@@ -586,7 +591,7 @@ ul#menu-primary>li:hover:before>.sub-menu {
 div.feature-description {
     border: .5px solid rgba(108, 117, 125, 0.7);
     padding: 5%;
-    height: 250px;
+    height: 320px;
     border-top: #fff;
 }
 .feature-images:hover .feature-title{
@@ -637,8 +642,10 @@ h2.features-main-title:before{
 h2#contact-top {
     margin-bottom: 5%;
 }
+@media (min-width: 992px){
 div#text-contact {
     margin-top: 25%;
+}
 }
 /*Image Banner Styking */
 .image-banner.widget{
@@ -700,6 +707,9 @@ footer.site-footer {
 footer .col-xs-12.col-md-5 p {
     float: right;
 }
+form#searchform input#s {
+    width: 40%;
+}
 /*icon to the top */
 .ion-arrow-up-c:before {
     font-size: 2em;
@@ -717,8 +727,26 @@ footer .col-xs-12.col-md-5 p {
 i.icon.ion-arrow-up-c:hover  {
     top: -25px;
 }
-
-
+h1.notfound-page-title {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: center;
+}
+/*---404 Page ---*/
+.not-found {
+    margin-bottom: 5%;
+    margin-top: 5%;
+    text-align: center;
+}
+.notfound-page-title {
+    background-size: cover !important;
+    background-position: 5% !important;
+    color: white;
+}
+.page-template-default div#header-wrap {
+    padding-top: 7em;
+    padding-bottom: 7em;
+}
 /*FEATURES WIDGET*/
 div.feature-images img {
     width: 100% !important;

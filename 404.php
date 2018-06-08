@@ -9,52 +9,24 @@
 
 get_header();
 ?>
+<style>#header-wrap{display:none;}</style>
+	<div class='notfound-header'>
+		<div class="cover-wrapper">
+			<h1 class="notfound-page-title" style='width:100%;background:url("http://localhost/doropm/wp-content/uploads/2018/06/433471-unsplash-min.jpg");'><?php _e( 'Oops! That page can&rsquo;t be found.', 'listify' ); ?></h1>
+		</div>
+	</div>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<div id="primary" class="container">
+		<div class="row content-area">
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'doropm' ); ?></h1>
-				</header><!-- .page-header -->
+			<main id="main" class="site-main col-md-12 col-xs-12" role="main">
+				<div class='not-found'>
+				<?php get_template_part( 'content', 'none' ); ?>
+				<h5>You can always return to the <a href='<?php echo get_home_url();?>'>HOMEPAGE.</a></h3>
+			</div>
+			</main>
 
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'doropm' ); ?></p>
+		</div>
+	</div>
 
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'doropm' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$doropm_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'doropm' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$doropm_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-get_footer();
+<?php get_footer(); ?>
