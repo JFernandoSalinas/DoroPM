@@ -1,19 +1,20 @@
 === DoroPM ===
 
-Contributors: automattic
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Contributors: Fersatos
+Tags: custom-background, custom-logo, custom-menu, featured-images
 
 Requires at least: 4.5
-Tested up to: 4.8
+Tested up to: 4.9.6
 Stable tag: 1.0.0
-License: GNU General Public License v2 or later
-License URI: LICENSE
+License: GPLv3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-A starter theme called DoroPM.
+A starter theme for DoroPM.com.
 
 == Description ==
 
-Description
+DoroPM is a WordPress theme built for personal use for Doropm.com.
+The theme was designed and customized to be used as a business website for Doro Property Maintenance.
 
 == Installation ==
 
@@ -25,6 +26,10 @@ Description
 
 = Does this theme support any plugins? =
 
-DoroPM includes support for Infinite Scroll in Jetpack.
+DoroPM uses Contact Form 7 in order for users to contact the website owner.
 
 == Changelog ==
+
+= 1.0.0: June 10, 2018 =
+
+First release!
